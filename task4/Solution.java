@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Task4 {
+public class Solution {
 
     public static void main(String[] args) {
         List<Integer> ints = new ArrayList<>();
