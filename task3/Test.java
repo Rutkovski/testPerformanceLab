@@ -3,8 +3,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
+
 @JsonAutoDetect
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Test {

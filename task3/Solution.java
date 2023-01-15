@@ -1,11 +1,12 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class Solution {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         ObjectMapper mapper = new ObjectMapper();
 
         File fileTests = new File(args[0]);
@@ -17,7 +18,7 @@ public class Solution {
             for (Value value : values.getValues()) {
                 searchAndReplace(tests.getTests(), value);
             }
-            File fileReport = new File(fileTests.getParent()+File.separator+"report.json");
+            File fileReport = new File("report.json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(fileReport, tests);
         } catch (IOException e) {
             System.out.println(e);
@@ -27,8 +28,8 @@ public class Solution {
     public static void searchAndReplace(List<Test> allTests, Value value) {
         for (Test test : allTests) {
             if (test.getId() == value.getId()) {
-            test.setValue(value.getValue());
-            return;
+                test.setValue(value.getValue());
+                return;
             }
             if (test.getValues() != null) {
                 searchAndReplace(test.getValues(), value);

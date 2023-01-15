@@ -3,10 +3,12 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @JsonAutoDetect
 public class JsonTests {
     @JsonDeserialize(as = ArrayList.class)
     private List<Test> tests;
+
     public JsonTests() {
     }
 

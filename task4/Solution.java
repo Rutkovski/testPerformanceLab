@@ -23,7 +23,7 @@ public class Solution {
         for (Integer anInt : ints) {
             result += Math.abs(anInt - m);
         }
-        System.out.println(result);
+        System.out.print(result);
     }
 
 
